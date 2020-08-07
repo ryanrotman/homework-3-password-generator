@@ -9,7 +9,7 @@ var pwSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 function writePassword() {
   // User prompts for password criteria
   var passwordCriteria = confirm("Press \"Ok\" to view the criteria for generating your password.");
-  console.log("Password Criteria " + passwordCriteria);
+  console.log("Password Criteria: " + passwordCriteria);
   do {var passwordLength = prompt("What would you like the length of your password to be? Please enter a number between 8 and 128.");}
     while (passwordLength <8 || passwordLength >128)
   console.log("Password Length: " + passwordLength);
