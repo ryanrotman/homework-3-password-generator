@@ -1,12 +1,34 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var pwLowerCase = "abcdefghijklmnopqrstuvwxyz"
+var pwUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var pwNumbers = "0123456789"
+var pwSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // User prompts for password criteria
+  var passwordCriteria = confirm("Press \"Ok\" to view the criteria for generating your password.");
+  console.log("Password Criteria " + passwordCriteria);
+  var passwordLength = prompt("What would you like the length of your password to be? Please enter a number between 8 and 128.");
+  // NEED TO FIGURE OUT HOW TO WRITE THE CODE TO STOP THE PROMPTS IF THE USER DOESN'T INPUT THE RIGHT LENGTH
+    // if (passwordLength <8 || passwordLength >128) {
+    //   alert("The number must be between 8 and 128.")
+    // }
+  console.log("Password Length: " + passwordLength);
+  var includeLowerCase = confirm("Would you like to include lower case letters in your password?");
+  console.log("Include lower case: " + includeLowerCase);
+  var includeUpperCase = confirm("Would you like to include upper case letters in your password?");
+  console.log("Include upper case: " + includeUpperCase);
+  var includeNumbers = confirm("Would you like to include numbers in your password?");
+  console.log("Include numbers: " + includeNumbers);
+  var includeSpecialCharacters = confirm("Would you like to include special characters in your password?");
+  console.log("Include special characters: " + includeSpecialCharacters);
 
-  passwordText.value = password;
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
+
+  // passwordText.value = password;
 
 }
 
