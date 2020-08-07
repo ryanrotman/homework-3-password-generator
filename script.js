@@ -37,7 +37,14 @@ function generatePassword () {
   }
 }
 generatePassword()
-console.log("Possible character options: " + passwordCharacterOptions)
+console.log("Possible character options: " + passwordCharacterOptions);
+
+// Generate final password chosen at random based on users specified length and character options
+for (i = 0; i < passwordLength; i++) {
+  userPassword += passwordCharacterOptions[Math.floor(Math.random() * passwordLength)];
+  }
+console.log("User Password is: " + userPassword);
+return(userPassword);
   
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
