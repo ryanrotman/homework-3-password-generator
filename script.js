@@ -4,6 +4,8 @@ var pwLowerCase = "abcdefghijklmnopqrstuvwxyz"
 var pwUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var pwNumbers = "0123456789"
 var pwSpecialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+var passwordCharacterOptions = ""
+var userPassword = ""
 
 // Write password to the #password input
 function writePassword() {
@@ -21,6 +23,21 @@ function writePassword() {
   console.log("Include numbers: " + includeNumbers);
   var includeSpecialCharacters = confirm("Would you like to include special characters in your password?");
   console.log("Include special characters: " + includeSpecialCharacters);
+
+// Generate string which password will be generated from based on user input
+function generatePassword () {
+  if (includeLowerCase === true) {
+    passwordCharacterOptions = passwordCharacterOptions + pwLowerCase;
+  } if (includeUpperCase === true) {
+    passwordCharacterOptions = passwordCharacterOptions + pwUpperCase;
+  } if (includeNumbers === true) {
+    passwordCharacterOptions = passwordCharacterOptions + pwNumbers;
+  } if (includeSpecialCharacters === true) {
+    passwordCharacterOptions = passwordCharacterOptions + pwSpecialCharacters;
+  }
+}
+generatePassword()
+console.log("Possible character options: " + passwordCharacterOptions)
   
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
