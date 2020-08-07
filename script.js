@@ -10,10 +10,8 @@ function writePassword() {
   // User prompts for password criteria
   var passwordCriteria = confirm("Press \"Ok\" to view the criteria for generating your password.");
   console.log("Password Criteria " + passwordCriteria);
-  var passwordLength = prompt("What would you like the length of your password to be? Please enter a number between 8 and 128.");
-  // NEED TO FIGURE OUT HOW TO WRITE THE CODE TO STOP THE PROMPTS IF THE USER DOESN'T INPUT THE RIGHT LENGTH
-    // while (passwordLength <8 || passwordLength >128) {
-    //   prompt("Please enter a number between 8 and 128.")
+  do {var passwordLength = prompt("What would you like the length of your password to be? Please enter a number between 8 and 128.");}
+    while (passwordLength <8 || passwordLength >128)
   console.log("Password Length: " + passwordLength);
   var includeLowerCase = confirm("Would you like to include lower case letters in your password?");
   console.log("Include lower case: " + includeLowerCase);
