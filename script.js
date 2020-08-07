@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("copy");
 var pwLowerCase = "abcdefghijklmnopqrstuvwxyz"
 var pwUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var pwNumbers = "0123456789"
@@ -24,33 +25,27 @@ function writePassword() {
   var includeSpecialCharacters = confirm("Would you like to include special characters in your password?");
   console.log("Include special characters: " + includeSpecialCharacters);
 
-// Generate string which password will be generated from based on user input
-function generatePassword () {
-  if (includeLowerCase === true) {
-    passwordCharacterOptions = passwordCharacterOptions + pwLowerCase;
-  } if (includeUpperCase === true) {
-    passwordCharacterOptions = passwordCharacterOptions + pwUpperCase;
-  } if (includeNumbers === true) {
-    passwordCharacterOptions = passwordCharacterOptions + pwNumbers;
-  } if (includeSpecialCharacters === true) {
-    passwordCharacterOptions = passwordCharacterOptions + pwSpecialCharacters;
+  // Generate string which password will be generated from based on user input
+  function generatePassword () {
+    if (includeLowerCase === true) {
+      passwordCharacterOptions = passwordCharacterOptions + pwLowerCase;
+    } if (includeUpperCase === true) {
+      passwordCharacterOptions = passwordCharacterOptions + pwUpperCase;
+    } if (includeNumbers === true) {
+      passwordCharacterOptions = passwordCharacterOptions + pwNumbers;
+    } if (includeSpecialCharacters === true) {
+      passwordCharacterOptions = passwordCharacterOptions + pwSpecialCharacters;
   }
+  console.log("Possible character options: " + passwordCharacterOptions);
+  for (i = 0; i < passwordLength; i++) {
+    userPassword += passwordCharacterOptions.charAt(Math.floor(Math.random() * passwordCharacterOptions.length));
+    }
+  console.log("User Password is: " + userPassword);
+  var passwordText = document.querySelector("#password");
+  passwordText.value = userPassword;
+  return(userPassword);
 }
 generatePassword()
-console.log("Possible character options: " + passwordCharacterOptions);
-
-// Generate final password chosen at random based on users specified length and character options
-for (i = 0; i < passwordLength; i++) {
-  userPassword += passwordCharacterOptions.charAt(Math.floor(Math.random() * passwordCharacterOptions.length));
-  }
-console.log("User Password is: " + userPassword);
-return(userPassword);
-  
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
 }
 
 // Add event listener to generate button
