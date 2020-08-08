@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var copyBtn = document.querySelector("copy");
 var pwLowerCase = "abcdefghijklmnopqrstuvwxyz"
 var pwUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var pwNumbers = "0123456789"
@@ -48,12 +47,5 @@ function writePassword() {
 generatePassword()
 }
 
-// Creat function to copy to the clipboard
-function copyToClipboard() {
-  document.querySelector("textarea").select();
-  document.execCommand("copy");
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-copyBtn.addEventListener("click", copyToClipboard);
