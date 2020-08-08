@@ -7,8 +7,15 @@ This project uses javascript to create an app that generates a random password b
 
 ## Notes
 One part that definitely took some time was making sure that the prompts continued only when the user entered an acceptable number between 8 and 128. To complete that, I used a do/while loop.
+> ![Screenshot_LengthInput](Assets/Images/ReadMe_ScreenShot_PasswordLengthInput.png)
+> ![Screenshot_LengthInputCode](Assets/Images/ReadMe_ScreenShot_PasswordLengthInputCode.png)
 
 ## Page Screenshots
+Main Page
+
+Page with a generated password of 10 characters
+
+Page with a generated password of 100 characters
 
 
 ## Link
