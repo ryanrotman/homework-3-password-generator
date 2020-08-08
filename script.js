@@ -26,7 +26,7 @@ function writePassword() {
   console.log("Include special characters: " + includeSpecialCharacters);
 
   // Generate string which password will be generated from based on user input
-  function generatePassword () {
+  function generatePassword() {
     if (includeLowerCase === true) {
       passwordCharacterOptions = passwordCharacterOptions + pwLowerCase;
     } if (includeUpperCase === true) {
