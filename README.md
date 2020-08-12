@@ -1,7 +1,7 @@
 # Homework 3: Password Generator
 
 ## Description
-This repository holds the second homework assignment for [The Coding Boot Camp](https://techbootcamps.utexas.edu/coding/) through the University of Texas at Austin's Center for Professional Education.
+This repository holds the third homework assignment for [The Coding Boot Camp](https://techbootcamps.utexas.edu/coding/) through the University of Texas at Austin's Center for Professional Education.
 
 This project uses javascript to create an app that generates a random password based on user input. This was definitely a tougher project as javascript has been incredibly intensive and has taken a lot to try and wrap my head around it all. I understood all the acceptance criteria, but figuring out how to write each section of code definitely took a long time to do.
 
